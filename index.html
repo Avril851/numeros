@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Sonidos con Números</title>
+    <style>
+        body {
+            background-color: #B2FF66; /* Color verde manzana más claro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+h1 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px #FFD700; /* Sombra de texto dorada */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable para niños */
+}
+
+        .sound-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .sound-button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #000;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Números con sonido</h1>
+    <div class="sound-box">
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(1)">1</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(2)">2</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(3)">3</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(4)">4</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(5)">5</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(6)">6</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(7)">7</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(8)">8</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(9)">9</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(10)">10</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(11)">11</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(12)">12</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(13)">13</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(14)">14</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(15)">15</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(16)">16</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(17)">17</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(18)">18</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(19)">19</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(20)">20</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(21)">21</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(22)">22</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(23)">23</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(24)">24</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(25)">25</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(26)">26</div>
+        <div class="sound-button" style="background-color: #3357FF;" onclick="playSound(27)">27</div>
+        <div class="sound-button" style="background-color: #F333FF;" onclick="playSound(28)">28</div>
+        <div class="sound-button" style="background-color: #FF5733;" onclick="playSound(29)">29</div>
+        <div class="sound-button" style="background-color: #33FF57;" onclick="playSound(30)">30</div>
+    </div>
+
+    <script>
+        function playSound(number) {
+            const msg = new SpeechSynthesisUtterance();
+            msg.text = number.toString();
+            msg.lang = 'es-ES'; // Establecer el idioma a español
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
+</body>
+</html>
+
+
